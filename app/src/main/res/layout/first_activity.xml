@@ -14,6 +14,22 @@
         android:weightSum="5"
         android:background="@android:color/white">
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_transportinfo"
+                android:layout_gravity="right"
+                android:padding="10dp"
+                android:gravity="center"
+                android:text="Transport Info"
+                android:onClick="onClick"
+                android:textSize="16sp"/>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/black" />
+
         <include layout="@layout/horizontal_scrollview_layout"
             android:id="@+id/hsv_items"/>
         <android.support.v4.view.ViewPager
@@ -26,27 +42,33 @@
             android:paddingTop="10dp"/>
 
         <RelativeLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1">
 
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true">
             <TextView
                 android:id="@+id/tv1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="2dp"
                 android:text="TextView 1"
                 android:textColor="@color/black"
-                android:padding="5dp"
                 android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/tv2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="2dp"
                 android:text="TextView 2"
                 android:layout_toRightOf="@id/tv1"
                 android:layout_below="@id/tv1"
-                android:padding="5dp"
                 android:textColor="@color/black"
                 android:textSize="18sp" />
 
@@ -54,14 +76,20 @@
                 android:id="@+id/tv3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="2dp"
                 android:layout_toRightOf="@id/tv2"
                 android:layout_below="@id/tv2"
-                android:padding="5dp"
                 android:text="TextView 3"
                 android:textColor="@color/black"
                 android:textSize="18sp" />
-
+            </RelativeLayout>
         </RelativeLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/black" />
 
         <TextView
             android:id="@+id/tv_itemdisplay"
@@ -70,8 +98,12 @@
             android:layout_height="0dp"
             android:gravity="center"
             android:textColor="@color/black"
-            android:padding="30dp"
+            android:padding="20dp"
             android:textSize="18sp" />
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/black" />
 
         <LinearLayout
             android:id="@+id/ll_bottom"
@@ -86,6 +118,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
+                android:layout_gravity="center"
                 android:layout_weight="1"
                 android:padding="10dp"
                 android:textSize="18sp"
@@ -96,6 +129,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
+                android:layout_gravity="center"
                 android:layout_weight="1"
                 android:padding="10dp"
                 android:textSize="18sp"
@@ -106,6 +140,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
+                android:layout_gravity="center"
                 android:layout_weight="1"
                 android:textColor="@color/black"
                 android:paddingLeft="10dp"
