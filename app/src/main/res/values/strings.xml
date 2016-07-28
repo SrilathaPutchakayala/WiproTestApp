@@ -7,4 +7,8 @@
     <string name="item3">Item 3</string>
     <string name="item4">Item 4</string>
     <string name="item5">Item 5</string>
+
+    <string name="url">http://express-it.optusnet.com.au/sample.json</string>
+    <string name="transport_mode_heading">Mode Of Transport:</string>
+    <string name="google_api_key">AIzaSyDymrBPsxmebGfK8X-_cq9cufjrxj4zqeM</string>
 </resources>
