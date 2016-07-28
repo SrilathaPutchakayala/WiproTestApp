@@ -2,6 +2,7 @@ package com.wiprotestapp;
 
 import android.app.Activity;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -24,6 +25,7 @@ import java.util.List;
 
 public class MainActivity extends FragmentActivity implements View.OnClickListener{
 
+    private TextView tv_transportinfo;
     private TextView tv_red;
     private TextView tv_blue;
     private TextView tv_green;
@@ -37,6 +39,7 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
         super.onCreate(savedInstanceState);
         setContentView(R.layout.first_activity);
 
+        tv_transportinfo = (TextView) findViewById(R.id.tv_transportinfo);
         tv_itemdisplay = (TextView)findViewById(R.id.tv_itemdisplay);
         tv_red = (TextView)findViewById(R.id.tv_red);
         tv_red.setOnClickListener(this);
@@ -132,6 +135,12 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
                 break;
             case R.id.tv_green:
                 ll_bottom.setBackgroundColor(getResources().getColor(R.color.green));
+                break;
+            case R.id.tv_transportinfo:
+                Intent transportInfoIntent = new Intent(MainActivity.this, TransportInfoActivity.class);
+                startActivity(transportInfoIntent);
+                finish();
+
                 break;
             default:
                 break;
